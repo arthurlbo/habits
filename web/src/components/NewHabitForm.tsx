@@ -31,7 +31,10 @@ const NewHabitForm = () => {
                 weekDays,
             });
 
-            response.status === 200 && alert("Hábito criado com sucesso !");
+            if (response.status === 200) {
+                alert("Hábito criado com sucesso !");
+                window.location.href = "/";
+            }
         } catch (error) {
             alert("Ops");
         }

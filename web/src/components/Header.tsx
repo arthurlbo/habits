@@ -1,4 +1,5 @@
 import * as Dialog from "@radix-ui/react-dialog";
+
 import { Plus, X } from "phosphor-react";
 
 import logoImage from "../assets/logo.svg";
@@ -6,7 +7,7 @@ import NewHabitForm from "./NewHabitForm";
 
 const Header = () => {
     return (
-        <div className="mx-auto flex w-full max-w-3xl items-center justify-between">
+        <div className="flex w-full items-center justify-between pl-10 pr-4">
             <img src={logoImage} alt="Habits" />
 
             <Dialog.Root>

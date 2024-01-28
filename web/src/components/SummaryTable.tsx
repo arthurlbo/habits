@@ -6,7 +6,7 @@ import { api } from "../lib/axios";
 import HabitDay from "./HabitDay";
 import dayjs from "dayjs";
 
-const weekDays = ["D", "S", "T", "Q", "Q", "S", "S"];
+const weekDays = ["S", "T", "Q", "Q", "S", "S", "D"];
 
 const summaryDates = generateDatesFromYearBeginning();
 const minimusSummaryDatesSize = 18 * 7; // 18 weeks
