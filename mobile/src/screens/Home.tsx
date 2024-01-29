@@ -11,7 +11,7 @@ import HabitDay from '../components/HabityDay';
 import Header from '../components/Header';
 import dayjs from 'dayjs';
 
-const weekDays = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'];
+const weekDays = ['S', 'T', 'Q', 'Q', 'S', 'S', 'D'];
 const summaryDates = generateDateFromYearBeginning();
 const minimusSummaryDatesSize = 18 * 5;
 const amountOfDaysToFill = minimusSummaryDatesSize - summaryDates.length;
