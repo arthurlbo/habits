@@ -5,6 +5,12 @@ import { appRoutes } from './routes';
 const app = fastify();
 
 app.register(cors);
+
+app.register(async () => {
+    app.get('/', async () => {
+        return "Hello world! 🌎"
+    });
+})
 app.register(appRoutes);
 
 app.listen({

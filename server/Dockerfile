@@ -1,14 +1,19 @@
 # pull the Node.js Docker image
 FROM node:alpine
 
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable
+
 # create the directory inside the container
 WORKDIR /usr/app
 
 # copy the package.json files from local machine to the workdir in container
 COPY package.json pnpm-lock.yaml ./
+COPY prisma ./prisma/
 
 # run pnpm install in our local machine
-RUN pnpm i
+RUN pnpm install
 
 # copy the generated modules and all other files to the container
 COPY . .
